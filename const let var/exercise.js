@@ -70,13 +70,15 @@
 // let myFinalResult = multiply(result);
 // console.log(myFinalResult);
 
+
+// 3 Number multiply with function
 function ThreeMultiplyNumber(num, num2, num3){
 return num * num2 * num3
 }
 
 let myNumber = ThreeMultiplyNumber(6, 9, 8)
 console.log(myNumber);
-
+// create a object and add another value
 let myObject = [
     {
         fName : "Helal",
@@ -94,4 +96,63 @@ myObject[0].Age = 60;
 console.log(myObject);
 
 
+//  Convert Feet To Inch With Function//
+function feetToInch(feet){
+return feet * 12;
+}
+
+let myFeet =  16;
+let myResult = feetToInch(myFeet);
+console.log(myResult);
+
+// Convert centimeter To Meter With Function//
+
+function centimeterToMeter(centimeter){
+    let meter= centimeter / 100;
+    return meter
+}
+
+let myCenterMeter = 2000;
+let myMeterResult =centimeterToMeter(myCenterMeter);
+console.log("Count Of Meter:",myMeterResult);
+// Out Put Long Name return 
+function bestFriend(friendArray){
+    let mystore="";
+for(let i =0; i<friendArray.length; i++){
+    if(friendArray[i].length>mystore.length){
+       mystore = friendArray[i];
+    }
+}
+return mystore;
+}
+let myFriend = ['Mamun','Shovo', 'Ikbal', 'kamrul','Rayan', 'Ifran Khan', 'Nasim Khan'];
+let myArray = bestFriend(myFriend)
+console.log(myArray);
+
+// Amount of sum Page//
+function paperRequirements(a, b, c){
+    return a*100 + b*200 + c*300;
+}
+
+
+console.log(paperRequirements(10, 20, 30));
+
+
+
+// Return Positive Number
+let Mynumber = [10, 20, 30, 40, 50, -5, -10, -30, -50, 12, 18, 30];
+
+function myFunc(){
+    let result = [];
+    for(let i = 0; i<Mynumber.length; i++){
+       if(Mynumber[i]<0){
+        break;
+       }
+       if(Mynumber[i] % 2 === 0){
+        result.push(Mynumber[i]);
+       }
+    }
+    return result;
+}
+console.log(myFunc());
 
