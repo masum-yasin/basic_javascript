@@ -27,7 +27,7 @@
                
         
           <tr>
-            <th scope="row">{{$student->id}}</th>
+            <td>{{$student->id}}</td>
             <td>{{$student->name}}</td>
             <td>{{$student->Department}}</td>
             <td>{{$student->Class_Roll}}</td>
