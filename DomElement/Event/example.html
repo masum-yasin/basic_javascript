@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <p id="pText">Bangladesh is a Beautiful Country</p> 
+  <input type="text" id="inputField"><br><br><br>
+   <button id="clickButton">Click Me Please</button>
+
+   <script>
+    document.getElementById('clickButton').addEventListener('click',function(){
+        // console.log('click btn successfully');
+        const inputfield = document.getElementById('inputField');
+        const inputText = inputfield.value;
+        // console.log(inputText);a
+        const p = document.getElementById('pText');
+        p.innerText = inputText;
+        inputfield.value = '';
+    })
+   </script>
+
+</body>
+</html>

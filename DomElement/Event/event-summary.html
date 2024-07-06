@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event By Click</title>
+</head>
+<body>
+    <h5 id="handlerStatus">Default Event on Click</h1>
+    <button onclick="handlerEvent()">Click On a Button Show to Another Text</button>
+<p id="textField">Bangladesh is a Development Country</p>
+<input type="text" name="" id="inputField"><br><br>
+    <button id="eventClick">Change Paragraph</button>
+    <h3 id="heading">Bangladesh is a Beautiful Country</h3>
+    <button id="hitButton">Click Us</button>
+    <script>
+        document.getElementById('hitButton').addEventListener('click', function(){
+            const clickHeading = document.getElementById('heading');
+            clickHeading.innerText = "India And Pakistan Always Fight Face to Face";
+        })
+    </script>
+
+
+
+
+
+
+
+    <script>
+        document.getElementById('eventClick').addEventListener('click', function(){
+            const inputfiled = document.getElementById('inputField');
+            const inputText = inputfiled.value;
+            // console.log(inputText);
+            const p = document.getElementById('textField');
+            p.innerText = inputText;
+            inputfiled.value = '';
+
+        })
+    </script>
+
+    <script>
+    function handlerEvent(){
+        const statusEvent = document.getElementById('handlerStatus');
+        statusEvent.innerHTML = "<h1>Event Hit and Change in Html Web page</h1>";
+    }
+    </script>
+</body>
+</html>

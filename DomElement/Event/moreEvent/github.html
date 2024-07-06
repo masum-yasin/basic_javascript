@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Text In the html Element</title>
+</head>
+<body>
+    <h1 id="remove-heading">Bangladesh is a Natural Country and She has most few Number Of Population</h1>
+<input type="text" id="InputField" placeholder="Please Hare Text Write Delete" name="">
+<button id="click-me" disabled>Remve Text</button>
+</body>
+
+<script>
+    
+    document.getElementById('InputField').addEventListener('keyup', function(event){
+        const text = event.target.value;
+        const DeleteButton = document.getElementById('click-me')
+        if(text==='delete'){
+            DeleteButton.removeAttribute('disabled');
+        }
+        else{
+            DeleteButton.setAttribute('disabled', true)
+        }
+        
+    
+    })
+    document.getElementById('click-me').addEventListener('click', function(){
+        const Heading = document.getElementById('remove-heading');
+        Heading.style.display = 'none';
+    });
+0
+</script>
+</html>
